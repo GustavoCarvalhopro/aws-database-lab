@@ -30,3 +30,14 @@ FROM clientes c
 JOIN pedidos p ON p.cliente_id = c.id
 GROUP BY c.nome
 ORDER BY total_gasto DESC;
+
+-- Listar pedidos com nome do usuário
+SELECT u.nome, p.valor, p.criado_em
+FROM pedidos p
+JOIN usuarios u ON u.id = p.usuario_id;
+
+-- Total gasto por usuário
+SELECT u.nome, SUM(p.valor) AS total_gasto
+FROM pedidos p
+JOIN usuarios u ON u.id = p.usuario_id
+GROUP BY u.nome;
