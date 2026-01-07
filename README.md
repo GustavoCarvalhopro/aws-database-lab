@@ -6,6 +6,7 @@ com foco em modelagem, consultas SQL e futura integração com AWS RDS.
 ## Tecnologias utilizadas
 - PostgreSQL
 - SQL
+- DBeaver
 - GitHub
 - AWS (RDS - Free Tier)
 
